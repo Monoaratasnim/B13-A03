@@ -107,7 +107,7 @@ function renderJobs() {
 
     const interviewBtn = document.createElement("button");
     interviewBtn.className = "btn uniform btn-outline btn-success btn-sm";
-    interviewBtn.innerText = "Interview";
+    interviewBtn.innerText = "INTERVIEW";
     interviewBtn.addEventListener("click", function() {
       job.status = "interview";
       renderJobs();
@@ -115,7 +115,7 @@ function renderJobs() {
 
     const rejectedBtn = document.createElement("button");
     rejectedBtn.className = "btn uniform btn-outline btn-error btn-sm";
-    rejectedBtn.innerText = "Rejected";
+    rejectedBtn.innerText = "REJECTED";
     rejectedBtn.addEventListener("click", function() {
       job.status = "rejected";
       renderJobs();
