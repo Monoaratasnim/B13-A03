@@ -32,3 +32,130 @@ function updateDashboard(){
   setText("rejectedCount", rejected);
 }
 
+function renderJobs() {
+  const container = getEl("jobsContainer");
+  container.innerHTML = "";
+
+  // Filter jobs based on tab
+  let filteredJobs = [];
+  if(currentTab === "all") filteredJobs = jobs;
+  else {
+    jobs.forEach(job => {
+      if(job.status === currentTab) filteredJobs.push(job);
+    });
+  }
+
+  setText("sectionCount", filteredJobs.length + " jobs");
+
+  if(filteredJobs.length === 0) {
+    showEl("emptyState");
+    updateDashboard();
+    return;
+  } else {
+    hideEl("emptyState");
+  }
+
+  filteredJobs.forEach(job => {
+    const card = document.createElement("div");
+    card.className = "card bg-base-100 shadow p-4 relative";
+
+    // Delete button
+    const delBtn = document.createElement("button");
+    delBtn.className = "absolute top-2 right-2 text-base-content/50 hover:text-base-content";
+    delBtn.innerHTML = '<i class="fa-solid fa-trash"></i>';
+    delBtn.addEventListener("click", function() {
+      const index = jobs.findIndex(j => j.id === job.id);
+      if(index !== -1) jobs.splice(index,1);
+      renderJobs();
+    });
+    card.appendChild(delBtn);
+
+    // Job Content
+    const content = document.createElement("div");
+    content.innerHTML = `<h2 class='font-bold text-lg'>${job.companyName}</h2>
+                         <p class='text-sm opacity-70 mt-1'>${job.position}</p>
+                         <p class='text-sm opacity-70 mt-1'>${job.location} • ${job.type} • ${job.salary}</p>`;
+
+    // Status Badge
+    const statusBadge = document.createElement("span");
+    statusBadge.className = "badge badge-custom mt-2";
+    if(job.status === "all") {
+      statusBadge.innerText = "NOT APPLIED";
+      statusBadge.style.backgroundColor = "#f3f4f6";
+      statusBadge.style.color = "#374151";
+    } else if(job.status === "interview") {
+      statusBadge.innerText = "INTERVIEW";
+      statusBadge.style.backgroundColor = "#10B981";
+      statusBadge.style.color = "white";
+    } else if(job.status === "rejected") {
+      statusBadge.innerText = "REJECTED";
+      statusBadge.style.backgroundColor = "#EF4444";
+      statusBadge.style.color = "white";
+    }
+
+    content.appendChild(statusBadge);
+
+    // Job Description (below badge)
+    const descEl = document.createElement("p");
+    descEl.className = "text-sm opacity-70 mt-1";
+    descEl.innerText = job.description;
+    content.appendChild(descEl);
+
+    // Action Buttons
+    const actions = document.createElement("div");
+    actions.className = "card-actions mt-4 gap-2 justify-start";
+
+    const interviewBtn = document.createElement("button");
+    interviewBtn.className = "btn uniform btn-outline btn-success btn-sm";
+    interviewBtn.innerText = "Interview";
+    interviewBtn.addEventListener("click", function() {
+      job.status = "interview";
+      renderJobs();
+    });
+
+    const rejectedBtn = document.createElement("button");
+    rejectedBtn.className = "btn uniform btn-outline btn-error btn-sm";
+    rejectedBtn.innerText = "Rejected";
+    rejectedBtn.addEventListener("click", function() {
+      job.status = "rejected";
+      renderJobs();
+    });
+
+    actions.appendChild(interviewBtn);
+    actions.appendChild(rejectedBtn);
+    content.appendChild(actions);
+    card.appendChild(content);
+    container.appendChild(card);
+  });
+
+  updateDashboard();
+}
+
+// ---------------- TAB EVENT LISTENERS ----------------
+function activateTab(tabId){
+  ["allTab","interviewTab","rejectedTab"].forEach(id => {
+    getEl(id).classList.remove("tab-active-custom");
+  });
+  getEl(tabId).classList.add("tab-active-custom");
+}
+
+getEl("allTab").addEventListener("click", function() {
+  currentTab = "all";
+  activateTab("allTab");
+  renderJobs();
+});
+
+getEl("interviewTab").addEventListener("click", function() {
+  currentTab = "interview";
+  activateTab("interviewTab");
+  renderJobs();
+});
+
+getEl("rejectedTab").addEventListener("click", function() {
+  currentTab = "rejected";
+  activateTab("rejectedTab");
+  renderJobs();
+});
+
+// ---------------- INITIAL RENDER ----------------
+renderJobs();
