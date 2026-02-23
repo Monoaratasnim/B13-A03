@@ -72,13 +72,13 @@ function renderJobs() {
 
     // Job Content
     const content = document.createElement("div");
-    content.innerHTML = `<h2 class='font-bold text-lg'>${job.companyName}</h2>
-                         <p class='text-sm opacity-70 mt-1'>${job.position}</p>
-                         <p class='text-sm opacity-70 mt-1'>${job.location} • ${job.type} • ${job.salary}</p>`;
+    content.innerHTML = `<h2 class='text-[#002C5C] font-bold text-lg'>${job.companyName}</h2>
+                         <p class='text-sm opacity-70 mt-3'>${job.position}</p>
+                         <p class='text-sm opacity-70 mt-3'>${job.location} • ${job.type} • ${job.salary}</p>`;
 
     // Status Badge
     const statusBadge = document.createElement("span");
-    statusBadge.className = "badge badge-custom mt-2";
+    statusBadge.className = "badge badge-custom mt-3";
     if(job.status === "all") {
       statusBadge.innerText = "NOT APPLIED";
       statusBadge.style.backgroundColor = "#f3f4f6";
@@ -97,13 +97,13 @@ function renderJobs() {
 
     // Job Description (below badge)
     const descEl = document.createElement("p");
-    descEl.className = "text-sm opacity-70 mt-1";
+    descEl.className = "text-sm opacity-70 mt-3";
     descEl.innerText = job.description;
     content.appendChild(descEl);
 
     // Action Buttons
     const actions = document.createElement("div");
-    actions.className = "card-actions mt-4 gap-2 justify-start";
+    actions.className = "card-actions mt-4 mb-2 gap-2 justify-start";
 
     const interviewBtn = document.createElement("button");
     interviewBtn.className = "btn uniform btn-outline btn-success btn-sm";
@@ -131,7 +131,6 @@ function renderJobs() {
   updateDashboard();
 }
 
-// ---------------- TAB EVENT LISTENERS ----------------
 function activateTab(tabId){
   ["allTab","interviewTab","rejectedTab"].forEach(id => {
     getEl(id).classList.remove("tab-active-custom");
@@ -157,5 +156,5 @@ getEl("rejectedTab").addEventListener("click", function() {
   renderJobs();
 });
 
-// ---------------- INITIAL RENDER ----------------
+
 renderJobs();

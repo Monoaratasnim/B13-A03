@@ -11,9 +11,32 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
 <style>
-    *{
-  font-family: "Geist", sans-serif;;
+    * { font-family: "Geist", sans-serif; }
+
+    .uniform {
+      min-height: 40px;
+      border-radius: 0.6rem; 
+      padding-left: 1rem;
+      padding-right: 1rem;
     }
+
+    .tab-active-custom {
+      background-color: #3B82F6 !important;
+      color: white !important;
+    }
+
+    .badge-custom {
+      color: #002C5C;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-radius: 0.6rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+  
 </style>
 </head>
 <body class="bg-base-200 min-h-screen">
@@ -33,7 +56,7 @@
     <!-- Section title -->
      <div class="flex justify-between items-center mb-4 ">
         <h2 class="text-lg  text-[#002C5C] sm:text-xl font-semibold">Available Jobs</h2>
-        <span id="sectionCount" class="font-semibold"></span>
+        <span id="sectionCount" class="text-sm opacity-70 font-medium"></span>
      </div>
     <!-- Tabs -->
      <div class="tabs tabs-boxed mb-4 sm:mb-6 gap-2 flex flex-wrap">
@@ -50,6 +73,9 @@
        <p class="opacity-70 text-sm sm:text-base">Check back soon for new job opportunities</p>
        </div>
       </div>
+     
+  <script src="script/common.js"></script>
+  <script src="script/app.js"></script>
 </body>
 
 </html>
