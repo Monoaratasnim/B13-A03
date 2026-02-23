@@ -4,8 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    *{
+  font-family: "Geist", sans-serif;;
+    }
+</style>
 </head>
-<body>
-    
+<body class="bg-base-200 min-h-screen">
+      <div class="max-w-4xl mx-auto p-4 sm:p-6">
+  <h1 class="text-2xl sm:text-3xl font-bold text-[#002C5C] mb-6 sm:mb-8">Job Application Tracker</h1>
+    <!-- Dashboard -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+        <div class="card bg-base-100 shadow p-3 sm:p-4 text-center"><h2 class="text-lg text-[#323B49] sm:text-lg font-medium">Total</h2>
+        <p id="totalCount" class="text-xl  text-[#002C5C] sm:text-2xl font-bold mt-2">8</p> </div>
+        <div class="card bg-base-100 shadow p-3 sm:p-4 text-center">
+           <h2 class="text-lg text-[#323B49] sm:text-lg font-medium">Interview</h2>
+        <p id="interviewCount" class="text-xl  text-[#10B981] sm:text-2xl font-bold mt-2">0</p>  </div>
+        <div class="card bg-base-100 shadow p-3 sm:p-4 text-center">
+            <h2 class="text-lg text-[#323B49] sm:text-lg font-medium">Rejected</h2>
+        <p id="rejectedCount" class="text-xl  text-[#EF4444] sm:text-2xl font-bold mt-2">0</p> </div>
+    </div>
+    <!-- Section title -->
+     <div class="flex justify-between items-center mb-4 ">
+        <h2 class="text-lg  text-[#002C5C] sm:text-xl font-semibold">Available Jobs</h2>
+        <span id="sectionCount" class="font-semibold"></span>
+     </div>
+    <!-- Tabs -->
+     <div class="tabs tabs-boxed mb-4 sm:mb-6 gap-2 flex flex-wrap">
+        <button id="allTab" class="tab uniform tab-active-custom btn btn-soft flex-1 sm:flex-none text-sm sm:text-base">All</button>
+        <button id="interviewTab" class="tab uniform btn btn-soft flex-1 sm:flex-none text-sm sm:text-base">Interview</button>
+        <button id="rejectedTab" class="tab uniform btn btn-soft flex-1 sm:flex-none text-sm sm:text-base">Rejected</button>
+     </div>
+     <!-- Jobs Container -->
+      <div id="jobsContainer" class="flex flex-col gap-4"></div>
+      <!-- Empty state -->
+       <div id="emptyState" class="hidden text-center py-12 sm:py-16">
+        <img src="jobs.png" alt="No jobs" class="mx-auto mb-4 w-16 sm:w-24 h-16 sm:h-24">
+       <h3 class="text-lg sm:text-xl font-semibold">No jobs Available</h3>
+       <p class="opacity-70 text-sm sm:text-base">Check back soon for new job opportunities</p>
+       </div>
+      </div>
 </body>
+    
+
 </html>
