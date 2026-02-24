@@ -83,11 +83,11 @@ function renderJobs() {
       statusBadge.innerText = "NOT APPLIED";
       statusBadge.style.backgroundColor = "#f3f4f6";
       statusBadge.style.color = "#374151";
-    } else if(job.status === "interview") {
+     } else if(job.status === "interview") {
       statusBadge.innerText = "INTERVIEW";
       statusBadge.style.backgroundColor = "#10B981";
       statusBadge.style.color = "white";
-    } else if(job.status === "rejected") {
+     } else if(job.status === "rejected") {
       statusBadge.innerText = "REJECTED";
       statusBadge.style.backgroundColor = "#EF4444";
       statusBadge.style.color = "white";
