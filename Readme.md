@@ -26,6 +26,4 @@ Ans: Event bubbling means the event moves from the child element to its parent e
 Ans: Event Delegation is a technique in JavaScript where we can add an event listener to a parent element instead of adding event listeners to many child elements. For example, instead of adding a click event to every <li> inside a <ul>, we can add one event listener to the <ul> and handle all <li> clicks from there.It is useful because it makes our code cleaner and shorter.It works for all element that are added later.
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
-Ans: preventDefault() and stopPropagation() are both event methods in JavaScript.
-preventDefault() stops the browser’s default action. For example, when we click a link, the browser normally opens a new page. If we use preventDefault(), the link will not open. 
-stopPropagation() stops the event from going up to parent elements. Example: If we click a button inside a div, the click won’t trigger events on the div or other parent elements.
+Ans: preventDefault() and stopPropagation() are both event methods in JavaScript.preventDefault() stops the browser’s default action. For example, when we click a link, the browser normally opens a new page. If we use preventDefault(), the link will not open. stopPropagation() stops the event from going up to parent elements. Example: If we click a button inside a div, the click won’t trigger events on the div or other parent elements.
