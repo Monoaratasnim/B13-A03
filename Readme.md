@@ -1,31 +1,37 @@
-1. What is the difference between getElementById, getElementsByClassName, and querySelector querySelectorAll?
+# 🛠️ GitHub Issue Tracker (Vanilla JS)
 
-Ans: getElementById is used to select an element using its unique ID. As an ID should only used once on a page and it returns only one element. It is fast and easy to use when you know the exact ID.
+A modern, fast, and responsive web application designed to track and manage GitHub repository issues. Built with core web technologies to demonstrate mastery of **Asynchronous JavaScript**, **DOM Manipulation**, and **API Integration**.
 
-getElementsByClassName finds elements using their class name. It returns a live HTMLCollection, which means if the page changes the collection updates automatically. It can return one or many elements.
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-querySelector finds the first element that matches a CSS selector like ID, class, tag, etc. It returns only one element and  more flexible because we can use different types of selectors.
+---
 
-querySelectorAll finds all elements that match a CSS selector. It returns a static NodeList, which means it does not update automatically if the page changes.
+## 🚀 Overview
+The **GitHub Issue Tracker** is a professional showcase of **Web Development** fundamentals. By avoiding frameworks, this project highlights a deep understanding of how the browser handles data fetching and interface updates natively.
 
-So we can say that, getElementById and getElementsByClassName are basic and specific methods, while querySelector and querySelectorAll are more modern and flexible because they use CSS selector rules.
+## ✨ Key Features
+* **Live API Fetching:** Uses the **GitHub REST API** to pull real-time data using `async/await` and the Fetch API.
+* **Dynamic DOM Rendering:** Efficiently updates the UI by manipulating the **Document Object Model (DOM)** directly.
+* **ES6 Search & Filter:** Implements high-speed searching and status filtering (Open/Closed) using modern JavaScript methods.
+* **Responsive Design:** A mobile-first layout built with **Tailwind CSS** and **DaisyUI** for a seamless user experience.
 
-2. How do you create and insert a new element into the DOM?
-Ans: <!-- Create element -->
-const newElement=document.createElement("div");
-<!-- Adding content and class -->
-newElement.textContent="Welcome to the programming hero!";
-newElement.classList.add("box");
-<!-- Insert into Dom -->
-document.body.appendChild(newElement);
+## 🛠️ Skills & Technologies
+* **JavaScript (ES6+):** Arrow functions, template literals, and asynchronous logic.
+* **HTML5 & CSS3:** Semantic structure and custom utility-based styling.
+* **API Integration:** Handling request-response cycles and error management.
+* **Web Development:** End-to-end project architecture from logic to deployment.
 
-3. What is Event Bubbling? And how does it work?
-Ans: Event bubbling means the event moves from the child element to its parent elements. If we click a button inside a div, the click event first happens on the button, then on the div, then on the body, and so on. The event bubbles up through the HTML structure.
+## 📦 Getting Started
 
-4. What is Event Delegation in JavaScript? Why is it useful?
-Ans: Event Delegation is a technique in JavaScript where we can add an event listener to a parent element instead of adding event listeners to many child elements. For example, instead of adding a click event to every <li> inside a <ul>, we can add one event listener to the <ul> and handle all <li> clicks from there.It is useful because it makes our code cleaner and shorter.It works for all element that are added later.
+1.  **Clone the Repo:**
+    ```bash
+    git clone [https://github.com/your-username/github-issue-tracker.git](https://github.com/your-username/github-issue-tracker.git)
+    ```
+2.  **Run Locally:**
+    No installation required. Open `index.html` in your favorite browser to begin tracking issues!
 
-5. What is the difference between preventDefault() and stopPropagation() methods?
-Ans: preventDefault() and stopPropagation() are both event methods in JavaScript.
-preventDefault() stops the browsers default action. For example, when we click a link, the browser normally opens a new page. If we use preventDefault(), the link will not open. 
-stopPropagation() stops the event from going up to parent elements. Example: If we click a button inside a div, the click won’t trigger events on the div or other parent elements.
+---
+Developed with ❤️ by [Monoara Tasnim](https://github.com/your-username)
