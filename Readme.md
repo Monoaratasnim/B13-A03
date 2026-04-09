@@ -1,6 +1,6 @@
-# 🛠️ GitHub Issue Tracker (Vanilla JS)
+# 🚀 Job Application Tracker
 
-A modern, fast, and responsive web application designed to track and manage GitHub repository issues. Built with core web technologies to demonstrate mastery of **Asynchronous JavaScript**, **DOM Manipulation**, and **API Integration**.
+A centralized, intuitive dashboard designed to streamline the career hunt. This tool helps job seekers organize applications, monitor interview stages, and manage follow-ups in one responsive interface.
 
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -9,29 +9,43 @@ A modern, fast, and responsive web application designed to track and manage GitH
 
 ---
 
-## 🚀 Overview
-The **GitHub Issue Tracker** is a professional showcase of **Web Development** fundamentals. By avoiding frameworks, this project highlights a deep understanding of how the browser handles data fetching and interface updates natively.
+## 🎯 Overview
+Managing dozens of job applications can become overwhelming. The **Job Application Tracker** acts as a personal CRM for your career, allowing you to move beyond messy spreadsheets. It emphasizes **Web Development** fundamentals and **Responsive Design** to ensure your data is accessible whether you're at your desk or on the go.
 
 ## ✨ Key Features
-* **Live API Fetching:** Uses the **GitHub REST API** to pull real-time data using `async/await` and the Fetch API.
-* **Dynamic DOM Rendering:** Efficiently updates the UI by manipulating the **Document Object Model (DOM)** directly.
-* **ES6 Search & Filter:** Implements high-speed searching and status filtering (Open/Closed) using modern JavaScript methods.
-* **Responsive Design:** A mobile-first layout built with **Tailwind CSS** and **DaisyUI** for a seamless user experience.
+* **Dynamic Application Management:** Add, edit, and delete job entries with a focus on seamless **DOM Manipulation**.
+* **Stage Tracking:** Categorize applications into stages like "Applied," "Interviewing," "Offer," or "Rejected."
+* **Status Filtering:** Quickly sort through your applications to prioritize follow-ups and upcoming interviews.
+* **Persistent Data:** Leverages browser storage (or API integration) to ensure your tracking progress is saved.
+* **Modern UI:** Built with **Tailwind CSS** and **DaisyUI** for a clean, distraction-free user experience.
 
-## 🛠️ Skills & Technologies
-* **JavaScript (ES6+):** Arrow functions, template literals, and asynchronous logic.
-* **HTML5 & CSS3:** Semantic structure and custom utility-based styling.
-* **API Integration:** Handling request-response cycles and error management.
-* **Web Development:** End-to-end project architecture from logic to deployment.
+## 🛠️ Technical Implementation
+
+### 1. JavaScript & ES6+ Logic
+The application logic is built with modern JavaScript to handle complex data states. I utilized ES6 features such as:
+* **Arrow Functions** for clean event handling.
+* **Array Methods (`.filter()`, `.map()`)** to organize and display application data.
+* **Template Literals** for dynamic UI rendering.
+
+### 2. Responsive Web Design
+Using a mobile-first approach, the dashboard adapts perfectly to any screen size. This ensures that job seekers can check their interview status or add a new entry immediately after a call.
+
+### 3. Asynchronous Workflow
+Even in a Vanilla JS environment, the project is architected to handle asynchronous operations, demonstrating a solid foundation for future backend or API integrations.
 
 ## 📦 Getting Started
 
-1.  **Clone the Repo:**
+1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/github-issue-tracker.git](https://github.com/your-username/github-issue-tracker.git)
+    git clone [https://github.com/your-username/Job-Application-Tracker.git](https://github.com/your-username/Job-Application-Tracker.git)
     ```
-2.  **Run Locally:**
-    No installation required. Open `index.html` in your favorite browser to begin tracking issues!
+2.  **Launch:**
+    Open `index.html` in your browser. No installation or build steps are required!
+
+## 🧠 Learning Outcomes
+* Improved ability to manage **Complex State** in Vanilla JavaScript.
+* Mastered **Responsive Layouts** using utility-first CSS principles.
+* Developed a user-centric workflow that solves a real-world productivity challenge.
 
 ---
 Developed with ❤️ by [Monoara Tasnim](https://github.com/your-username)
