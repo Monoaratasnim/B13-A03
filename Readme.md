@@ -33,14 +33,6 @@ Using a mobile-first approach, the dashboard adapts perfectly to any screen size
 ### 3. Asynchronous Workflow
 Even in a Vanilla JS environment, the project is architected to handle asynchronous operations, demonstrating a solid foundation for future backend or API integrations.
 
-## 📦 Getting Started
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/your-username/Job-Application-Tracker.git](https://github.com/your-username/Job-Application-Tracker.git)
-    ```
-2.  **Launch:**
-    Open `index.html` in your browser. No installation or build steps are required!
 
 ## 🧠 Learning Outcomes
 * Improved ability to manage **Complex State** in Vanilla JavaScript.
